@@ -1,62 +1,16 @@
+<?php require_once 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Slim Framework PT-BR</title>
+    <title><?php echo isset($title) ? $title : "Home "; ?> - Slim Framework PT-BR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="O Slim é um micro framework PHP que auxilia na construção de aplicações web ou APIs simples e poderosas de forma rápida.">
+    <meta name="description" content="<?php echo $description; ?>">
     <meta name="author" content="Paulo Fernandes">
 
     <!-- Le styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 40px;
-      }
-
-      /* Custom container */
-      .container-narrow {
-        margin: 0 auto;
-        max-width: 950px;
-      }
-      .container-narrow > hr {
-        margin: 30px 0;
-      }
-
-      /* Main marketing message and sign up button */
-      .jumbotron {
-        margin: 60px 0;
-        text-align: center;
-      }
-      .jumbotron h1 {
-        font-size: 72px;
-        line-height: 1;
-      }
-      .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-      }
-      .jumbotron .lead { 
-          width: 75%; 
-          margin: 20px auto; 
-      }
-      
-      /* Supporting marketing content */
-      .marketing {
-        margin: 60px 0;
-      }
-      .marketing p + h4 {
-        margin-top: 28px;
-      }
-      
-      /* funcionalidade */
-      .funcionalidade {  
-        width: 60%;
-        margin: 0 auto;
-      }
-      
-    </style>
+    <link href="assets/css/my-style.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -78,11 +32,11 @@
 
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Início</a></li>
-          <li><a href="#">Ajuda</a></li>
-          <li><a href="#">Equipe</a></li>
+          <li class="active"><a href="<?php echo HOST_WEB; ?>">Início</a></li>
+          <li><a href="<?php echo HOST_WEB; ?>ajuda">Ajuda</a></li>
+          <li><a href="<?php echo HOST_WEB; ?>equipe">Equipe</a></li>
         </ul>
-        <h3 class="muted">Slim Framework</h3>
+        <h3 class="muted"><a href="<?php echo HOST_WEB; ?>">Slim Framework</a></h3>
       </div>
 
       <hr>
@@ -95,8 +49,8 @@
         <p class="lead">
             <span class="alert alert-block"><strong>Detalhe!</strong> Para usá-lo você só precisa do <strong>PHP 5.3.0 ou superior</strong></span>
         </p>        
-        <a class="btn btn-large btn-success" href="#">Instale Agora</a> 
-        <a class="btn btn-large btn-primary" href="#">Documentação</a>
+        <a class="btn btn-large btn-success" href="<?php echo HOST_WEB; ?>instale">Instale Agora</a> 
+        <a class="btn btn-large btn-primary" href="<?php echo HOST_WEB; ?>documentacao">Documentação</a>
         <a href="#myModal" role="button" class="btn btn-large btn-inverse" data-toggle="modal">Funcionalidades</a>
       </div>
   
@@ -133,6 +87,7 @@
         <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
       </div>
     </div>
+      <hr>
       
       <div class="footer">
           <p>&copy; <a href="http://slimframework.com">Slim Framework</a> 2012 - Versão traduzida e modificada por <a href="#">Paulo Fernandes</a></p>
@@ -145,6 +100,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
-    
   </body>
 </html>
