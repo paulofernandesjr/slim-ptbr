@@ -1,0 +1,4 @@
+web1: #component type & number
+  name: slim-ptbr            #component settings
+  document_root: /
+  php_version: 5.3.8
